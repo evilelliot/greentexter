@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+}
+.form{
+    border-radius: 5px;
+    border: 2px solid green;
+    padding: 10px;
+    margin-top: 10px;
+}
+.result{
+    margin: auto;
+    width: 65%;
+    background-color: #FFFFEE;
+    padding-bottom: 10px;
+    border: 5px solid #880000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.top-result{
+    background-color: #FFCCAA;
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.anonymus{
+    font-weight: bolder;
+    margin-left: 5px;
+    color: green;
+}
+.id{
+    font-weight: bolder;
+    margin-left: 5px;
+    color: rgb(126, 19, 0);
+    float: right;
+    margin-right: 5px;
+}
+.dots{
+    margin-left: 5px;
+    color: rgb(126, 19, 0);
+}
+.date{
+    float: right;
+    margin-right: 5px;
+}
+.title{
+    margin-left: 5px;
+    color: purple;
+    font-weight: bolder;
+}
+.content{
+    margin-left: 5px;
+    display: inline-block;
+    min-width: 300px;
+}
+/*Greentext classes*/
+.gt{
+    color: green;
+    font-weight: 100;
+}

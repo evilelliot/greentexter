@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="stylesheet/_greentexter.css">
+        <title>Greentexter | Go green!</title>
+    </head>
+    <body>
+        <div class="container" style="margin-top: 100px;">
+            <h1 class="text-center text-success">
+                <b class="animated_title">>Greentexter</b>
+            </h1>
+        </div>
+        <div class="container form" id="greentext_full">
+            <div class="result" id="result">
+                <div class="top-result">
+                    <div class="tr-firs">
+                        <span class="dots"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                        <span class="anonymus">Anonymus</span>
+                        <span class="id" id="_id">No. 00000</span>
+                        <span id="_date" class="date"></span>
+                    </div>
+                    <div class="tr-second">
+                        <span class="title" id="_title" contenteditable="true">Some wacky title</span>
+                    </div>
+                </div>
+                <div>
+                    <p id="_gtcontent" class="content" contenteditable="true">
+
+                    </p>
+                </div>
+                
+                <div class="img-out" id="preview" style="visibility: none;">
+
+                </div>
+            </div>
+        </div>
+        <div class="container form">
+            <div style="width: 50%; margin:auto;" class="row">
+                <div class="col"><button class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-circle-info"></i> How to use</button></div>
+                <div class="col"><button id="btn_convert" class="btn btn-success btn-block"><i class="fa-solid fa-download"></i> Download</button></div>
+                <div class="col"><button id="btn_clear" class="btn btn-danger btn-block"><i class="fa-solid fa-x"></i> Clear</button></div>
+            </div>
+            
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title gt" id="exampleModalLabel"><b>>watching instructions</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div styles="width: auto; margin:auto;">
+                        <img src="https://ih1.redbubble.net/image.2991188919.2149/pp,504x498-pad,600x600,f8f8f8.jpg" class="pull-left" width="100px">
+                    </div>
+                    <p>
+                        Greentexter is a simple tool that allows us to meme stories and visualise them in real time as if we were posting them on 4chan, 
+                        with the advantage of not having to convert to white supremacism in the process.
+                    </p>
+                    <p>
+                        <b>How to use it?</b>
+                        <br>
+                        <ol>
+                            <li>Come up with a funny title for your story and write it down.</li>
+                            <li>write your greentext, don't forget traditions such as 'being me'.</li>
+                            <li>click the download button and receive an image of your story.</li>
+                        </ol>
+                        <br>
+                    </p>
+                    
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close this thing</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/38a3806765.js" crossorigin="anonymous"></script>
+        <script src="js/html2canvas.js"></script>
+        <script src="js/typed.js"></script>
+        <script src="js/_main.js"></script>
+        <script>
+            var typed = new Typed('.animated_title', {
+                strings: [">greentexter.", ">being me", ">learning js", ">tfw no gf"],
+                typeSpeed: 400,
+                loop: true
+            });
+        </script>
+    </body>
+</html>
