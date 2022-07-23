@@ -13,7 +13,10 @@ $(function () {
     fulldate = day + "/" + month + "/" + year;
     $("#_date").text(fulldate + " (" + days[da.getDay()] + ")");
 
-    const regex = /^(&gt;)(.*$)/gm;
+    const regex_gt = /^(&gt;)(.*$)/gm;
+    const regex_rt = /^(&lt;)(.*$)/gm;
+    const regex_it = /(\*{2,2})(.*?)\1/;
+    const regex_bl = /(\*{1,1})(.*?)\1/;
     const subst = '<span class="text-success">$1</span>';
     var random_id, date;
     random_id = Math.floor(10000000 + Math.random() * 9000000);
@@ -27,7 +30,22 @@ $(function () {
         var str_result; 
         a.forEach(func);
         function func(item, index){
-            var aux = item.replace(regex, '<span class="gt">>$2</span>');
+            var aux;
+            if(item.match(regex_gt)){
+                aux = item.replace(regex_gt, '<span class="gt">>$2</span>');
+            }else if(item.match(regex_rt)){
+                aux = item.replace(regex_rt, '<span class="rt">>$2</span>');
+            }else if(item.match(regex_bl)){
+                aux = item.replace(regex_bl, '<b>$2</b>');
+            }else if(item.match(regex_it)){
+                aux = item.replace(regex_it, '<i>$2</i>');
+            }else if(item.match(regex_it) && item.match(regex_bl)){
+                aux = item.replace(regex_it, '<i>$2</i>');
+                aux = item.replace(regex_bl, '<b>$2</b>');
+            }else{
+                aux = item;
+            }
+            
             _result.push(aux + "<br>");
         }
         str_result = _result.join('');

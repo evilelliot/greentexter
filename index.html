@@ -8,13 +8,22 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="./stylesheet/_greentexter.css">
+        <link rel="stylesheet" href="./stylesheet/_draggable.css">
         <title>Greentexter | Go green!</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
     </head>
     <body>
         <div class="container" style="margin-top: 100px;">
             <h1 class="text-center text-success">
                 <b class="animated_title">>Greentexter</b>
             </h1>
+            
         </div>
         <div class="container form" id="greentext_full">
             <div class="result" id="result">
@@ -30,9 +39,16 @@
                     </div>
                 </div>
                 <div>
-                    <p id="_gtcontent" class="content" contenteditable="true">
-
-                    </p>
+                
+                    <div class="drop-zone">
+                        <span class="drop-zone__prompt"><i class="fa-solid fa-image" style="font-size: 50px;"></i></span>
+                        <input type="file" name="myFile" class="drop-zone__input">
+                    </div>
+                    <div class="center">
+                        <p id="_gtcontent" class="content" contenteditable="true">
+                            
+                        </p>
+                    </div>
                 </div>
                 
                 <div class="img-out" id="preview" style="visibility: none;">
@@ -48,6 +64,7 @@
             </div>
             
         </div>
+        <h6 class="text-center text-primary">Check out version 2!</h6>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -76,10 +93,45 @@
                         </ol>
                         <br>
                     </p>
-                    
+                    <p>
+                        <b>Recent updates!</b>
+                        <br>
+                        Now you can do some new cool stuff with your greentext stories.
+                        <br>
+                        Check out these new cool features!
+                        <ol>
+                            <li>Now you can add images to your story.</li>
+                            <li>Drag and drop feature!</li>
+                            <li>Redtext, as the opposite of greentext.</li>
+                            <li><b>Bold</b> and <i>Italic</i> formats.</li>
+                        </ol>
+                        <br>
+                    </p>
+                    <p>
+                        <b>Format cheatset:</b>
+                        <ol>
+                            <li>Greentext: <span class="gt">&gt;sometext</span> </li>
+                            <li>Redtext: <span class="rt">&lt;sometext</span> </li>
+                            <li><b>Bold: </b> *sometext*</li>
+                            <li><i>Italic: </i> **sometext**</li>
+                        </ol>
+                        <br>
+                    </p>
+                    <p>
+                        <b>Coming soon!</b>
+                        <ol>
+                            <li>Major fixes: format priority fix, image fix, mobile font fix, etc.</li>
+                            <li>Image resizing and positioning.</li>
+                            <li>Theme choosing: hacker theme, confetti theme, etc.</li>
+                            <li>Your fortune function.</li>
+                            <li>Dice function.</li>
+                        </ol>
+                        <br>
+                    </p>
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close this thing</button>
+                <a href="https://github.com/evilelliot/greentexter" target="_blank" class="btn btn-dark"><i class="fa-brands fa-github-alt"></i> Peep this!</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close this thing</a>
                 </div>
             </div>
             </div>
@@ -91,6 +143,7 @@
         <script src="js/html2canvas.js"></script>
         <script src="./js/typed.js"></script>
         <script src="./js/_main.js"></script>
+        <script src="./js/draggable.js"></script>
         <script>
             var typed = new Typed('.animated_title', {
                 strings: [">greentexter.", ">being me", ">learning js", ">tfw no gf"],
